@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+Sistema: proyecto web
+autor: Carlos Boni
+fecha: enero 2021
+-->
+
+<head>
+  <title>Cajas En Cabecera</title>
+  <meta charset="UTF-8"/>
+  
+    <style>
+		* {
+			box-sizing:border-box;
+		}
+		
+		
+		body {
+			margin:0px;
+		}
+		
+		div {
+			height:200px;	
+		}
+		
+		#cajon {
+			display:flex;
+		}
+		
+		#caja1 {
+			background-color:rgba(255,0,0,1);
+			width:33%;
+		}
+		
+		#caja2 {
+			background-color:rgba(0,255,0,1);
+			width:34%;
+		}
+		
+		#caja3 {
+			background-color:rgba(0,0,255,1);
+			width:33%;
+		}
+		
+		/* cuando el ancho es menor de 600 pixels, apila las cajas */
+		@media screen and (max-width:600px){
+			#cajon {
+				display:block;
+			}
+			#caja1, #caja2, #caja3 {
+				width:100%;	
+			}		
+		}
+		
+  </style>
+
+</head>
+
+
+<body>
+ <div id="cajon">
+	<div id="caja1">una linea
+	</div>
+	<div id="caja2">TEXTO CAJA 2***<br/>***<br/>***
+	</div>
+	<div id="caja3">***<br/>
+	</div>
+	
+ </div>
+</body>
+</html>
