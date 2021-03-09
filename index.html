@@ -122,8 +122,19 @@ li a:hover:not(.active) {
 	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
-	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
-	<script src="00-modelo.js"></script>
+
+	<script>
+ 					actualizar();
+ 					var contador = 0;
+ 					function actualizar() {
+ 						if (sessionStorage.contador) {
+ 							sessionStorage.contador = Number(sessionStorage.contador) +1;
+ 						}else{
+ 							sessionStorage.setItem("Contador", 1);
+ 						}
+ 						$("#Mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
+ 					}
+ 				</script>
 	
 	<!-- scripts personalizados Javascript o JQuery -->
 	<script>
@@ -137,23 +148,12 @@ li a:hover:not(.active) {
 	<div class="marco">
 		<div class="encabezado">
 			<ul>
-  				<li><a href="#home">Inicio</a></li>
+  				<li><a href=https://robezb.github.io/publico/>Inicio</a></li>
   				<li><a href="#news">Actualidad</a></li>
   				<li><a href="#contact">Blog</a></li>
  				<li><a href="#about">Tendencias</a></li>
  				<li><a href="#about">Contactar</a></li>
- 				<li><script>
- 					actualizar();
-
- 					function actualizar() {
- 						if (sessionStorage.contador) {
- 							sessionStorage.contador = Number(sessionStorage.contador) +1;
- 						}else{
- 							sessionStorage.setItem("Contador", 1);
- 						}
- 						$("#Mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
- 					}
- 				</script></li>
+ 				<li><a onclick="actualizar()">Contador</a></li>
 			</ul>
 		</div>
 		<div class="migas">Migas de pan (ruta)</div>
