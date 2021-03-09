@@ -1,167 +1,182 @@
-<!DOCTYPE html>
-<html lang="es">
+	<!DOCTYPE html>
+	<html lang="es">
 
-<!--
-HTML
-web o pagina:
-autor: Roberto Zambrana Bas
-fecha: Marzo 2021
--->
+	<!--
+	HTML
+	web o pagina:
+	autor: Roberto Zambrana Bas
+	fecha: Marzo 2021
+	-->
 
-<head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	
-	<!-- importante SEO para la etiqueta del navegador -->
-	<title>Parcial-Roberto Zambrana</title>
-	
-	<!-- una fuente de Google -->
-	<link rel="preconnect" href="https://fonts.gstatic.com"/>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
-	
-	<!-- una hoja de estilos externa-->
-	
-	<!-- una hoja de estilos personalizada-->
-	<link href="00-modelo.css" rel="stylesheet"/>
-	
-	<!-- iconos u otros elementos externos -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
-	<!-- solo aquellos estilos que solo aplican a esta pagina -->
-    <style>
-		*{
-		  box-sizing: border-box;
-		  padding: 0;
-		  margin: 0;
-		}
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
-		.marco {
-		  display: grid;
-		  border-style: solid;
-		  border-color: red;
-		  grid-template-columns: 250px auto;
-		  grid-template-rows: 150px 40px auto 40px;
-		  grid-gap: 10px;
-		  width: 100vw;
-		  height: 100vh;
-		  background-image: url(Docs/IMG/fondo.jpg);
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-attachment: fixed;
-		  background-size: cover;
-		}
+		<!-- importante SEO para la etiqueta del navegador -->
+		<title>Parcial-Roberto Zambrana</title>
 		
-		.encabezado {
-		  border-style: solid;
-		  border-color: blue;
-		  grid-column: 1 / span 2;
-		  grid-row: 1 / span 1;
-		}
+		<!-- una fuente de Google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
 		
-		.migas {
-		  border-style: solid;
-		  border-color: yellow;
-		  grid-column: 1 / span 2;
-		  grid-row: 2 / span 1;
-		}
+		<!-- una hoja de estilos externa-->
 		
-		.lado {
-		  border-style: solid;
-		  border-color: violet;
-		  grid-column: 1 / span 1;
-		  grid-row: 3 / span 1;
-		}
+		<!-- una hoja de estilos personalizada-->
+		<link href="00-modelo.css" rel="stylesheet"/>
 		
-		.contenido {
-		  border-style: solid;
-		  border-color: violet;
-		  grid-column: 2 / span 1;
-		  grid-row: 3 / span 1;
-		}
+		<!-- iconos u otros elementos externos -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 		
-		.pie {
-		  border-style: solid;
-		  border-color: aqua;
-		  grid-column: 1 / span 2;
-		  grid-row: 4 / span 1;
+		<!-- solo aquellos estilos que solo aplican a esta pagina -->
+	    <style>
+			*{
+			  box-sizing: border-box;
+			  padding: 0;
+			  margin: 0;
+			}
+			
+			.marco {
+			  display: grid;
+			  border-style: solid;
+			  border-color: red;
+			  grid-template-columns: 250px auto;
+			  grid-template-rows: 150px 40px auto 40px;
+			  grid-gap: 10px;
+			  width: 100vw;
+			  height: 100vh;
+			  background-image: url(Docs/IMG/fondo.jpg);
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: cover;
+			}
+			
+			.encabezado {
+			  border-style: solid;
+			  border-color: blue;
+			  grid-column: 1 / span 2;
+			  grid-row: 1 / span 1;
+			}
+			
+			.migas {
+			  border-style: solid;
+			  border-color: yellow;
+			  grid-column: 1 / span 2;
+			  grid-row: 2 / span 1;
+			}
+			
+			.lado {
+			  border-style: solid;
+			  border-color: violet;
+			  grid-column: 1 / span 1;
+			  grid-row: 3 / span 1;
+			}
+			
+			.contenido {
+			  border-style: solid;
+			  border-color: violet;
+			  grid-column: 2 / span 1;
+			  grid-row: 3 / span 1;
+			}
+			
+			.pie {
+			  border-style: solid;
+			  border-color: aqua;
+			  grid-column: 1 / span 2;
+			  grid-row: 4 / span 1;
+			}
+
+			img.derecha {
+			float:right;
+			margin:5px;
+			/* width:420px; */
+			/* height:220px; */
+			width:25%;
+			height:auto;
+			object-fit:cover;
 		}
 
-		ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+			ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
 
-li {
-  float: left;
-}
+	li {
+	  float: left;
+	}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
 
-li a:hover:not(.active) {
-  background-color: #111;
-}
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
 
-.active {
-  background-color: #4CAF50;
-}
+	.active {
+	  background-color: #4CAF50;
+	}
 
-	</style>
-	
-	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
+		</style>
+		
+		<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 
-	<script>
- 					actualizar();
- 					var contador = 0;
- 					function actualizar() {
- 						if (sessionStorage.contador) {
- 							sessionStorage.contador = Number(sessionStorage.contador) +1;
- 						}else{
- 							sessionStorage.setItem("Contador", 1);
- 						}
- 						$("#Mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
- 					}
- 				</script>
-	
-	<!-- scripts personalizados Javascript o JQuery -->
-	<script>
-		// aqui el codigo ...
-	</script>
-</head>
+		<script>
+	 					actualizar();
+	 					var contador = 0;
+	 					function actualizar() {
+	 						if (sessionStorage.contador) {
+	 							sessionStorage.contador = Number(sessionStorage.contador) +1;
+	 						}else{
+	 							sessionStorage.setItem("Contador", 1);
+	 						}
+	 						$("#Mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
+	 					}
+	 				</script>
+		
+		<!-- scripts personalizados Javascript o JQuery -->
+		<script>
+			// aqui el codigo ...
+		</script>
+	</head>
 
 
-<body>
+	<body>
 
-	<div class="marco">
-		<div class="encabezado">
-			<ul>
-  				<li><a href="https://robezb.github.io/publico/">Inicio</a></li>
-  				<li><a href="https://robezb.github.io/Actualidad/">Actualidad</a></li>
-  				<li><a href="#contact">Blog</a></li>
- 				<li><a href="#about">Tendencias</a></li>
- 				<li><a href="#about">Contactar</a></li>
- 				<li><a onclick="actualizar()">Contador</a></li>
-			</ul>
+		<div class="marco">
+			<div class="encabezado">
+				<ul>
+	  				<li><a href="https://robezb.github.io/publico/">Inicio</a></li>
+	  				<li><a href="https://robezb.github.io/Actualidad/">Actualidad</a></li>
+	  				<li><a href="#contact">Blog</a></li>
+	 				<li><a href="#about">Tendencias</a></li>
+	 				<li><a href="#about">Contactar</a></li>
+	 				<li><a onclick="actualizar()">Contador</a></li>
+				</ul>
+			</div>
+			<div class="migas">Migas de pan (ruta)</div>
+			<div class="lado">Lado</div>
+			<div class="contenido">
+				<img class="derecha" src="Docs/IMG/Yo.jpg"/>
+		<p>El Cóndor Andino (Vultur gryphus) también conocido como el Cóndor de los Andes o simplemente Cóndor es el ave volador viva más grande del planeta, llegando a medir 1,42 m de alto, 3,30 m de envergadura y el macho puede llegar a pesar hasta 15 kg y la hembra hasta 11 kg.</p>
+		<p>El cóndor es una gran ave de color negro con un plumaje blanco alrededor de su cuello y en la punta de sus alas, su cabeza carece de plumas y es de un tono rojizo, la cual cambia de color dependiendo del estado emocional del ave, el macho cuenta con una cresta.</p>
+		<p>Su pico es bordeado con terminación en gancho y cortante, con grandes alas y patas no prensiles, es decir que no sirven para agarrar su presa debido a que poseen uñas cortas y no son curvas, pero le permiten sujetar la carroña.</p>
+			</div>
+			<div class="pie">Pie de página</div>
 		</div>
-		<div class="migas">Migas de pan (ruta)</div>
-		<div class="lado">Lado</div>
-		<div class="contenido">Contenido</div>
-		<div class="pie">Pie de página</div>
-	</div>
 
 
-</body>
-</html>
+	</body>
+	</html>
