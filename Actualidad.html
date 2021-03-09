@@ -1,155 +1,182 @@
-<!DOCTYPE html>
-<html lang="es">
+	<!DOCTYPE html>
+	<html lang="es">
 
-<!--
-HTML
-web o pagina:
-autor: Roberto Zambrana Bas
-fecha: Marzo 2021
--->
+	<!--
+	HTML
+	web o pagina:
+	autor: Roberto Zambrana Bas
+	fecha: Marzo 2021
+	-->
 
-<head>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	
-	<!-- importante SEO para la etiqueta del navegador -->
-	<title>Parcial-Roberto Zambrana</title>
-	
-	<!-- una fuente de Google -->
-	<link rel="preconnect" href="https://fonts.gstatic.com"/>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
-	
-	<!-- una hoja de estilos externa-->
-	
-	<!-- una hoja de estilos personalizada-->
-	<link href="00-modelo.css" rel="stylesheet"/>
-	
-	<!-- iconos u otros elementos externos -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
-	<!-- solo aquellos estilos que solo aplican a esta pagina -->
-    <style>
-		*{
-		  box-sizing: border-box;
-		  padding: 0;
-		  margin: 0;
-		}
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
-		.marco {
-		  display: grid;
-		  border-style: solid;
-		  border-color: red;
-		  grid-template-columns: 250px auto;
-		  grid-template-rows: 150px 40px auto 40px;
-		  grid-gap: 10px;
-		  width: 100vw;
-		  height: 100vh;
-		  background-image: url(Docs/IMG/fondo.jpg);
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-attachment: fixed;
-		  background-size: cover;
-		}
+		<!-- importante SEO para la etiqueta del navegador -->
+		<title>Parcial-Roberto Zambrana</title>
 		
-		.encabezado {
-		  border-style: solid;
-		  border-color: blue;
-		  grid-column: 1 / span 2;
-		  grid-row: 1 / span 1;
-		}
+		<!-- una fuente de Google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
 		
-		.migas {
-		  border-style: solid;
-		  border-color: yellow;
-		  grid-column: 1 / span 2;
-		  grid-row: 2 / span 1;
-		}
+		<!-- una hoja de estilos externa-->
 		
-		.lado {
-		  border-style: solid;
-		  border-color: violet;
-		  grid-column: 1 / span 1;
-		  grid-row: 3 / span 1;
-		}
+		<!-- una hoja de estilos personalizada-->
+		<link href="00-modelo.css" rel="stylesheet"/>
 		
-		.contenido {
-		  border-style: solid;
-		  border-color: violet;
-		  grid-column: 2 / span 1;
-		  grid-row: 3 / span 1;
-		}
+		<!-- iconos u otros elementos externos -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 		
-		.pie {
-		  border-style: solid;
-		  border-color: aqua;
-		  grid-column: 1 / span 2;
-		  grid-row: 4 / span 1;
-		}
+		<!-- solo aquellos estilos que solo aplican a esta pagina -->
+	    <style>
+			*{
+			  box-sizing: border-box;
+			  padding: 0;
+			  margin: 0;
+			}
+			
+			.marco {
+			  display: grid;
+			  border-style: solid;
+			  border-color: red;
+			  grid-template-columns: 250px auto;
+			  grid-template-rows: 150px 40px auto 40px;
+			  grid-gap: 10px;
+			  width: 100vw;
+			  height: 100vh;
+			  background-color: lightgray;
+			  /*background-image: url(Docs/IMG/fondo.jpg);
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: cover;*/
+			}
+			
+			.encabezado {
+			  border-style: solid;
+			  border-color: blue;
+			  grid-column: 1 / span 2;
+			  grid-row: 1 / span 1;
+			}
+			
+			.migas {
+			  border-style: solid;
+			  border-color: yellow;
+			  grid-column: 1 / span 2;
+			  grid-row: 2 / span 1;
+			}
+			
+			.lado {
+			  border-style: solid;
+			  border-color: violet;
+			  grid-column: 1 / span 1;
+			  grid-row: 3 / span 1;
+			}
+			
+			.contenido {
+			  border-style: solid;
+			  border-color: violet;
+			  grid-column: 2 / span 1;
+			  grid-row: 3 / span 1;
+			}
+			
+			.pie {
+			  border-style: solid;
+			  border-color: aqua;
+			  grid-column: 1 / span 2;
+			  grid-row: 4 / span 1;
+			}
 
-		ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+			img.izquierda {
+		float:left;
+		clear:right;
+		margin:5px;
+		/* width:600px; */
+		/* height:300px; */
+		width:18%;
+		height:auto;
+		object-fit:cover;
+	}
 
-li {
-  float: left;
-}
+			ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+	li {
+	  float: left;
+	}
 
-li a:hover:not(.active) {
-  background-color: #111;
-}
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
 
-.active {
-  background-color: #4CAF50;
-}
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
 
-	</style>
-	
-	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
-	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
-	<script src="00-modelo.js"></script>
-	
-	<!-- scripts personalizados Javascript o JQuery -->
-	<script>
-		// aqui el codigo ...
-	</script>
-</head>
+	.active {
+	  background-color: #4CAF50;
+	}
+
+		</style>
+		
+		<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+
+		<script>
+	 					actualizar();
+	 					var contador = 0;
+	 					function actualizar() {
+	 						if (sessionStorage.contador) {
+	 							sessionStorage.contador = Number(sessionStorage.contador) +1;
+	 						}else{
+	 							sessionStorage.setItem("Contador", 1);
+	 						}
+	 						$("#Mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
+	 					}
+	 				</script>
+		
+		<!-- scripts personalizados Javascript o JQuery -->
+		<script>
+			// aqui el codigo ...
+		</script>
+	</head>
 
 
-<body>
+	<body>
 
-	<div class="marco">
-		<div class="encabezado">
-			<ul>
-  				<li><a href="#home">Inicio</a></li>
-  				<li><a href="#news">Actualidad</a></li>
-  				<li><a href="#contact">Blog</a></li>
- 				<li><a href="#about">Tendencias</a></li>
- 				<li><a href="#about">Contactar</a></li>
-			</ul>
+		<div class="marco">
+			<div class="encabezado">
+				<ul>
+	  				<li><a href="https://robezb.github.io/publico/">Inicio</a></li>
+	  				<li><a href="https://robezb.github.io/Actualidad/">Actualidad</a></li>
+	  				<li><a href="#contact">Blog</a></li>
+	 				<li><a href="#about">Tendencias</a></li>
+	 				<li><a href="#about">Contactar</a></li>
+	 				<li><a onclick="actualizar()">Contador</a></li>
+				</ul>
+			</div>
+			<div class="migas">Migas de pan (ruta)</div>
+			<div class="lado">Lado</div>
+			<div class="contenido">
+				<img class="izquierda" src="Docs/IMG/Yo3.png"/>
+		<p>Mi nombre es Roberto Zambrana Bas.<br>Soy alumno del centro CENEC. Actualmente me encuentro en el primer año del grado sumerior de desarrollo de aplicaciones multiplataformas, elegi esta opcion porque me gustaria terminar trabajando como programador en alguna empresa aunque de momento no se que lenguaje me gustara ya que todavia me queda mucho por aprender y descubrir.</p>
+			</div>
+			<div class="pie">Pie de página</div>
 		</div>
-		<div class="migas">Migas de pan (ruta)</div>
-		<div class="lado">Lado</div>
-		<div class="contenido">Contenido</div>
-		<div class="pie">Pie de página</div>
-	</div>
 
 
-</body>
-</html>
+	</body>
+	</html>
