@@ -68,47 +68,62 @@
 				}
 
 				img.izquierda {
-			float:left;
-			clear:right;
-			margin:5px;
-			/* width:600px; */
-			/* height:300px; */
-			width:17%;
-			height:auto;
-			object-fit:cover;
-		}
+				float:left;
+				clear:right;
+				margin:5px;
+				/* width:600px; */
+				/* height:300px; */
+				width:17%;
+				height:auto;
+				object-fit:cover;
+				}
 
 				ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
-		}
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				  overflow: hidden;
+				  background-color: #333;
+				  position: fixed;
+				  top: 0;
+				  width: 100%;
+				}
 
-		li {
-		  float: left;
-		}
+				li {
+				  float: left;
+				}
 
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
+				li a {
+				  display: block;
+				  color: white;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				}
 
-		li a:hover:not(.active) {
-		  background-color: #111;
-		}
+				li a:hover:not(.active) {
+				  background-color: #111;
+				}
 
-		.active {
-		  background-color: #4CAF50;
-		}
+				.active {
+			 	 background-color: #4CAF50;
+				}
 
+				.vertical-menu {
+			  	width: 244px;
+				}
+
+				.vertical-menu a {
+				  background-color: #333;
+				  color: white;
+				  display: block;
+				  padding: 12px;
+				  text-decoration: none;
+				}
+
+				.vertical-menu a:hover {
+	 			 background-color: #ccc;
+				}
 			</style>
 			
 			<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
@@ -152,7 +167,15 @@
 					<p id="me"></p>
 				</div>
 				<div class="migas">Migas de pan (ruta)</div>
-				<div class="lado">Lado</div>
+				<div class="lado">
+					<div class="vertical-menu">
+					  <a href="index.html">Inicio</a>
+					  <a href="Actualidad.html">Actualidad	</a>
+					  <a href="#">Blog</a>
+					  <a href="#">Tendencias</a>
+					  <a href="#">Contactar</a>
+					</div>
+				</div>
 				<div class="contenido">
 					<img class="izquierda" src="Docs/IMG/Yo3.png"/>
 			<p>Mi nombre es Roberto Zambrana Bas.<br>Soy alumno del centro CENEC. Actualmente me encuentro en el primer año del grado sumerior de desarrollo de aplicaciones multiplataformas, elegi esta opcion porque me gustaria terminar trabajando como programador en alguna empresa aunque de momento no se que lenguaje me gustara ya que todavia me queda mucho por aprender y descubrir.<br><br></p>
