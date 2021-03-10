@@ -143,17 +143,16 @@
 			
 
 			<script>
-		 					actualizar();
-		 					var contador = 0;
-		 					function actualizar() {
-		 						if (sessionStorage.contador) {
-		 							sessionStorage.contador = Number(sessionStorage.contador) +1;
-		 						}else{
-		 							sessionStorage.setItem("Contador", 1);
-		 						}
-		 						$("#mensaje").text('Has cargado '+ sessionStorage.contador + ' paginas del sitio web.');
-		 					}
-		 				</script>
+        $(document).ready(function() {
+            var x = sessionStorage.getItem('#contador') + 1;
+            if (sessionStorage.getItem('cont')!==null) {
+                x = Number(sessionStorage.getItem('cont')) + x; 
+            }
+            sessionStorage.setItem('cont', x);
+            $("#contador").text(x);
+
+        });
+    </script>
 			
 			<!-- scripts personalizados Javascript o JQuery -->
 			<script>
@@ -172,11 +171,9 @@
 		  				<li><a href="#contact">Blog</a></li>
 		 				<li><a href="#about">Tendencias</a></li>
 		 				<li><a href="#about">Contactar</a></li>
-		 				<li><a onclick="actualizar()">Contador</a></li>
+		 				<li><a onclick="contador()">Contador</a></li>
 		 				<li id="mensaje"></li>
 					</ul>
-					<p><a onclick="actualizar()">Contador</a></p>
-					<p id="me"></p>
 				</div>
 				<div class="migas">Migas de pan (ruta)</div>
 				<div class="lado">
