@@ -62,6 +62,13 @@
 				  overflow: auto;
 				  background-color: #DDFFF7;
 				}
+
+				#mensaje {
+				float: right;
+				color: white;
+				text-align: center;
+				 padding: 14px 16px;
+			}
 				
 				.pie {
 				  grid-column: 1 / span 2;
@@ -119,6 +126,8 @@
 		  text-decoration: none;
 		}
 
+		#
+
 		li a:hover:not(.active) {
 		  background-color: #111;
 		}
@@ -148,19 +157,6 @@
 			<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 			
-
-			<script>
-        $(document).ready(function() {
-            var x = sessionStorage.getItem('#contador') + 1;
-            if (sessionStorage.getItem('cont')!==null) {
-                x = Number(sessionStorage.getItem('cont')) + x; 
-            }
-            sessionStorage.setItem('cont', x);
-            $("#contador").text(x);
-
-        });
-    </script>
-			
 			<!-- scripts personalizados Javascript o JQuery -->
 			<script>
 				// aqui el codigo ...
@@ -178,9 +174,8 @@
 		  				<li><a href="#contact">Blog</a></li>
 		 				<li><a href="#about">Tendencias</a></li>
 		 				<li><a href="#about">Contactar</a></li>
-		 				<li><span id="contador">0</span></li>
+		 				<li id="mensaje">0</li>
 					</ul>
-					<p>Ha cargado <span id="contador">0</span> veces</p>
 				</div>
 				<div class="migas"><b>Se encuentra en Actualidad</b></div>
 				<div class="lado">
@@ -210,5 +205,18 @@
 				<div class="pie"><b>2021 - Correo de contacto: robeplayamar@gmail.com</b></div>
 			</div>
 
+<script>
+        $(document).ready(function() {
+            var x = sessionStorage.getItem('#mensaje') + 1;
+            if (sessionStorage.getItem('cont')!==null) {
+                x = Number(sessionStorage.getItem('cont')) + x; 
+            }
+            sessionStorage.setItem('cont', x);
+            $("#mensaje").text('Has visitado '+x+' veces la pagina');
+
+            $("#ruta").text("Actualmente estas en 'Inicio'");
+
+        });
+    </script>
 		</body>
 		</html>
