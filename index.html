@@ -27,144 +27,60 @@
 		<!-- iconos u otros elementos externos -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+		<!-- CSS -->
+		<link rel="stylesheet" href="estilo.css">
+
 		<!-- solo aquellos estilos que solo aplican a esta pagina -->
-		<style>
-			*{
-				box-sizing: border-box;
-				padding: 0;
-				margin: 0;
-			}
-
-			.marco {
-				display: grid;
-				grid-template-columns: 250px auto;
-				grid-template-rows: 150px 40px auto 40px;
-				grid-gap: 10px;
-				width: 100vw;
-				height: 100vh;
-				background-color: #93E1D8;
-			}
-
-			.lado {
-				border-style: solid;
-				border-color: black;
-				grid-column: 1 / span 1;
-				grid-row: 3 / span 1;
-				background-color: #333;
-			}
-
-			.contenido {
-				border-style: solid;
-				border-color: black;
-				grid-column: 2 / span 1;
-				grid-row: 3 / span 1;
-				color: black;
-				overflow: auto;
-				background-color: #DDFFF7;
-			}
-
-			.pie {
-				grid-column: 1 / span 2;
-				grid-row: 4 / span 1;
-				text-align: center;
-			}
-
-			.migas {
-				grid-column: 1 / span 2;
-				grid-row: 2 / span 1;
-			}
-
-			#mensaje {
-				float: right;
-				color: white;
-				text-align: center;
-				 padding: 14px 16px;
-			}
-
-			img.izquierda {
-				float:left;
-				clear:right;
-				margin:5px;
-				width:17%;
-				height:auto;
-				object-fit:cover;
-			}
-
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-				background-color: #333;
-				position: fixed;
-				top: 0;
-				width: 100%;
-			}
-
-			li {
-				float: left;
-			}
-
-			li a {
-				display: block;
-				color: white;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-			}
-
-			li a:hover:not(.active) {
-				background-color: #111;
-			}
-
-			.active {
-				background-color: #4CAF50;
-			}
-
-			.vertical-menu {
-				width: 244px;
-			}
-
-			.vertical-menu a {
-				background-color: #333;
-				color: white;
-				display: block;
-				padding: 12px;
-				text-decoration: none;
-			}
-
-			.vertical-menu a:hover {
-				background-color: #ccc;
-			}
-		</style>
 
 		<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 		<!-- scripts personalizados Javascript o JQuery -->
 		<script>
-				// aqui el codigo ...
-			</script>
+			var modal = document.getElementById('id01');
+
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
 		</head>
 
 
 		<body>
 
 			<div class="marco">
-				<div class="encabezado">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="Actualidad/Actualidad.html">Actualidad</a></li>
-						<li><a href="SobreMi/SobreMi.html">Sobre mi</a></li>
-						<li id="mensaje">0</li>
-					</ul>
+
+				<div id="id01" class="modal">
+					<span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span>
+					
+					<form class="modal-content animate" action="/action_page.php">
+						<div class="imgcontainer">
+						</div>
+
+						<div class="container">
+							<label for="uname"><b>Nombre usuario</b></label>
+							<input type="text" placeholder="Introduzca usuario: " name="uname" required>
+
+							<label for="psw"><b>Contraseña</b></label>
+							<input type="password" placeholder="Introduzca contraseña: " name="psw" required>
+
+							<button type="submit">Entrar</button>
+						</div>
+
+						<div class="container" style="background-color:#f1f1f1">
+							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+						</div>
+					</form>
 				</div>
-				<div class="migas"><b>Se encuentra en Inicio</b></div>
 				<div class="lado">
 					<div class="vertical-menu">
 						<a href="index.html">Inicio</a>
 						<a href="actualidad/Actualidad.html">Actualidad	</a>
 						<a href="SobreMi/SobreMi.html">Sobre mi</a>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 					</div>
 				</div>
 				<div class="contenido">
@@ -176,19 +92,5 @@
 				</div>
 				<div class="pie"><b>2021 - Correo de contacto: robeplayamar@gmail.com</b></div>
 			</div>
-<script>
-        $(document).ready(function() {
-            var x = sessionStorage.getItem('#mensaje') + 1;
-            if (sessionStorage.getItem('cont')!==null) {
-                x = Number(sessionStorage.getItem('cont')) + x; 
-            }
-            sessionStorage.setItem('cont', x);
-            $("#mensaje").text('Has visitado '+x+' veces la pagina');
-
-            $("#ruta").text("Actualmente estas en 'Inicio'");
-
-        });
-    </script>
-
 		</body>
 		</html>
