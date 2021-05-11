@@ -93,6 +93,7 @@
 				display: block;
 				padding: 12px;
 				text-decoration: none;
+				opacity: 0.8;
 			}
 
 			.vertical-menu a:hover {
@@ -101,7 +102,7 @@
 
 			input[type=text], input[type=password] {
 				width: 100%;
-				padding: 12px 20px;
+				padding: 20px 20px;
 				margin: 8px 0;
 				display: inline-block;
 				border: 1px solid #ccc;
@@ -109,8 +110,8 @@
 			}
 
 			button {
-				background-color: #4CAF50;
-				color: white;
+				background-color: #FFC300;
+				color: black;
 				padding: 14px 109px;
 				margin: 8px 0;
 				border: none;

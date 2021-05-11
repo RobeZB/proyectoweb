@@ -1,0 +1,96 @@
+		<!DOCTYPE html>
+		<html lang="es">
+
+		<!--
+		HTML
+		web o pagina:
+		autor: Roberto Zambrana Bas
+		fecha: Marzo 2021
+	-->
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<!-- importante SEO para la etiqueta del navegador -->
+		<title>Parcial-Roberto Zambrana</title>
+
+		<!-- una fuente de Google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet"/>
+
+		<!-- una hoja de estilos externa-->
+
+		<!-- una hoja de estilos personalizada-->
+		<link href="00-modelo.css" rel="stylesheet"/>
+
+		<!-- iconos u otros elementos externos -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="estilo.css">
+
+		<!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+		<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- scripts personalizados Javascript o JQuery -->
+		<script>
+			var modal = document.getElementById('id01');
+
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+		</head>
+
+
+		<body>
+
+			<div class="marco">
+
+				<div id="id01" class="modal">
+					<span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span>
+					
+					<form class="modal-content animate" action="/action_page.php">
+						<div class="imgcontainer">
+						</div>
+
+						<div class="container">
+							<label for="uname"><b>Nombre usuario</b></label>
+							<input type="text" placeholder="Introduzca usuario: " name="uname" required>
+
+							<label for="psw"><b>Contraseña</b></label>
+							<input type="password" placeholder="Introduzca contraseña: " name="psw" required>
+
+							<button type="submit">Entrar</button>
+						</div>
+
+						<div class="container" style="background-color:#f1f1f1">
+							<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+						</div>
+					</form>
+				</div>
+				<div class="lado">
+					<div class="vertical-menu">
+						<a href="index.html">Inicio</a>
+						<a href="actualidad/Actualidad.html">Actualidad	</a>
+						<a href="SobreMi/SobreMi.html">Sobre mi</a>
+						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+					</div>
+				</div>
+				<div class="contenido">
+					<h1>Roberto Zambrana Bas</h1>
+					<h2><br>Indice-Contenido</h2>
+						<a href=""><br>• Ejercicios HTML (no hay nada, los tengo en el pc de clase)<br><br></a>
+						<a href="">• Ejercicios HTML (no hay nada, los tengo en el pc de clase)<br><br></a>
+						<a href="SobreMi/SobreMi.html">• ACTUALIDAD, Sobre esta pagina trabajare<br></a>
+				</div>
+				<div class="pie"><b>2021 - Correo de contacto: robeplayamar@gmail.com</b></div>
+			</div>
+		</body>
+		</html>
