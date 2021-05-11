@@ -415,7 +415,7 @@ nav a::before {
 	top: 180%!important;
 	transform: translateY(-180%);
 }
-#tabs {
+#	 {
   float: right;
   margin-right: 0px;
 }
@@ -467,7 +467,7 @@ nav a::before {
 }
 .tabs-content {
   margin-left: 60px;
-  width: 585px;
+  width: 800px;
   text-align: left;
   display: inline-block;
   background: #fff;
