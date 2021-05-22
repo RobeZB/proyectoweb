@@ -37,10 +37,24 @@ function miFuncion(xml) {
   //Si el nombre y la contraseña es correcto lo guarda en el sessionStorage y devuelve a la pagina
   if (esCorrecto == true) {
       sessionStorage.setItem("nomUser", document.forms["formularioLogin"]["Usuario"].value);
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
   } else {
       //Si no es correcto mando una alerta
       window.alert("Nombre y/o contraseña incorrectos.");
   }
   // muestro en consola el array de usuarios registrados
+}
+
+function cargarUsuario() {
+    if (sessionStorage.getItem("nomUser") !== null) {
+      $("#login").css("display","none");
+      $("#logout").css("display","initial");
+      document.getElementById('perfil').innerHTML = "Usuario- " + sessionStorage.getItem("nomUser");
+}
+}
+
+function cerrarSesion() {
+  sessionStorage.removeItem("nomUser");
+  $("#logout").css("display","none");
+  $("#login").css("display","initial");
 }

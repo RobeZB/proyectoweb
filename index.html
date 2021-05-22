@@ -3,6 +3,8 @@
 
   <head>
 
+    <script src="assets/js/formulario.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -21,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
 
   </head>
-  <body>
+  <body onload="cargarUsuario()">
 
     <div class="sequence">
   
@@ -39,7 +41,9 @@
             <li><a href="#1"><img src="assets/images/icon-1.png" alt=""> <em>Inicio</em></a></li>
             <li><a href="#2"><img src="assets/images/icon-2.png" alt=""> <em>Sobre Mi</em></a></li>
             <li><a href="#3"><img src="assets/images/icon-3.png" alt=""> <em>Galeria</em></a></li>
-            <li><a href="#4"><img src="assets/images/icon-4.png" alt=""> <em>LogIn</em></a></li>
+            <li id="login"><a href="#4"><img src="assets/images/icon-4.png" alt=""> <em>LogIn</em></a></li>
+            <li id="logout" ><a href="" onclick="cerrarSesion()"><img src="assets/images/icon-5.png" alt=""> <em>LogOut</em></a></li>
+            <li id="perfil" style="color: white"></li>
           </ul>
         </nav>
         
@@ -179,13 +183,12 @@
         <div class="slide" id="4">
             <div class="content fourth-content">
                 <div class="container-fluid">
-                    <form id="contact" action="" method="post">
+                    <form id="contact" name="formularioLogin" onsubmit="leerXML()">
                         <div class="row">
                           <div class="col-md-12">
                             <h2>Log In</h2>
                           </div>
                           <div class="col-md-6">
-                            <form name="formularioLogin">
                             <fieldset>
                               <input name="Usuario" type="text" class="form-control" id="name" placeholder="Usuario" required="">
                             </fieldset>

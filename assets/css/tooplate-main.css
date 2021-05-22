@@ -312,6 +312,16 @@ nav a::before {
   background-position: fixed;
 }
 
+#login {
+  display: initial;
+}
+
+#logout {
+  display: none;
+}
+
+
+
 /* Slide 1 Stlye */
 #slider-wrapper{
   max-width: 100%;
