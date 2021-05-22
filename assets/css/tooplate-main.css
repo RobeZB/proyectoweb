@@ -477,13 +477,13 @@ nav a::before {
   color: #1e1e1e;
 }
 .tabs-content {
-  margin-left: 60px;
-  width: 800px;
+  margin-left: 40px;
+  width: 1000px;
   text-align: left;
   display: inline-block;
   background: #fff;
   margin-right: 30px;
-  padding: 60px;
+  padding: 45px;
 }
 .tabs-content h2 {
   font-size: 29px;
