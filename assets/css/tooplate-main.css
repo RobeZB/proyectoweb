@@ -565,6 +565,7 @@ nav a::before {
   margin-bottom: 100px;
   padding: 40px;
   background-color: rgba(0,0,0,0.9);
+  display: block;
 }
 #contact h2 {
   font-size: 29px;
