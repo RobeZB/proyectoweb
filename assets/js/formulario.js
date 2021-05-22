@@ -49,7 +49,7 @@ function cargarUsuario() {
     if (sessionStorage.getItem("nomUser") !== null) {
       $("#login").css("display","none");
       $("#logout").css("display","initial");
-      document.getElementById('perfil').innerHTML = "Usuario- " + sessionStorage.getItem("nomUser");
+      document.getElementById('perfil').innerHTML = "Usuario-> " + sessionStorage.getItem("nomUser");
 }
 }
 
