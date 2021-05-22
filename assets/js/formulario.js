@@ -5,7 +5,7 @@ function leerXML() {
       miFuncion(this);
     }
   };
-  xhr.open("GET", "https://lander990.github.io/publico/PruebasProyecto/login/registrados.xml", true);
+  xhr.open("GET", "https://robezb.github.io/proyectoweb/assets/xml/registrados.xml", true);
   xhr.send();    
 }
 
@@ -18,8 +18,8 @@ function miFuncion(xml) {
   var xmlDoc = xml.responseXML;
   var x = xmlDoc.getElementsByTagName("usuario");
   var esCorrecto = false; //Esta variable comprobará si el usuario y la contraseñas puesta en el formulario esta en el XML
-  var nomForm = document.forms["Login"]["nombre"].value; //Guarda el nombre que se ha puesto en el formulario
-  var passForm = document.forms["Login"]["pwd"].value; //Guarda la contraseña que se ha puesto en el formulario
+  var nomForm = document.forms["formularioLogin"]["Usuario"].value; //Guarda el nombre que se ha puesto en el formulario
+  var passForm = document.forms["formularioLogin"]["Contraseña"].value; //Guarda la contraseña que se ha puesto en el formulario
 
   for (i = 0; i <x.length; i++) { 
     // leo las etiquetas que me interesan del objeto
@@ -36,7 +36,7 @@ function miFuncion(xml) {
 
   //Si el nombre y la contraseña es correcto lo guarda en el sessionStorage y devuelve a la pagina
   if (esCorrecto == true) {
-      sessionStorage.setItem("nomUser", document.forms["Login"]["nombre"].value);
+      sessionStorage.setItem("nomUser", document.forms["formularioLogin"]["Usuario"].value);
     window.location.href = '../index.html';
   } else {
       //Si no es correcto mando una alerta
