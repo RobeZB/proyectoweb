@@ -50,7 +50,7 @@ function cargarUsuario() {
       $("#login").css("display","none");
       $("#logout").css("display","initial");
       $(".down-content").css("display","block");
-      document.getElementById('perfil').innerHTML = "Usuario-> " + sessionStorage.getItem("nomUser");
+      document.getElementById('perfil').innerHTML = "Usuario: " + sessionStorage.getItem("nomUser");
 }
 }
 
