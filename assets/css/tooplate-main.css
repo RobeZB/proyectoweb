@@ -322,6 +322,7 @@ nav a::before {
 
 
 
+
 /* Slide 1 Stlye */
 #slider-wrapper{
   max-width: 100%;
@@ -524,6 +525,7 @@ nav a::before {
   background-color: #fff;
   border: 5px solid #faf5b2;
   padding: 15px;
+  display: none;
 }
 .featured-item h4 {
   margin-top: 0px;
