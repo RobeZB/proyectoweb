@@ -58,4 +58,5 @@ function cerrarSesion() {
   sessionStorage.removeItem("nomUser");
   $("#logout").css("display","none");
   $("#login").css("display","initial");
+  location.reload();
 }
