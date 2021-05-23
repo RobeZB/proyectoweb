@@ -410,6 +410,13 @@ nav a::before {
   font-weight: 700;
   color: #fff;
 }
+.slide-caption h4 {
+  margin-top: 0px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #faf5b2;
+}
 .slide-caption h2 {
   margin-top: 0px;
   font-size: 60px;
