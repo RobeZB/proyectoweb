@@ -19,4 +19,8 @@
 <nombre>Roberto</nombre>
 <clave>Zambrana</clave>
 </usuario>
+<usuario id="5">
+<nombre>Alicia</nombre>
+<clave>Guzman</clave>
+</usuario>
 </registrados>
